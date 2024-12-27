@@ -35,8 +35,8 @@ export const addTask = async (req, res) => {
 
     try {
         const { title, desc } = req.body
-        await createTask({title, desc});
-        return res.status(201).json({ success: true, message: "Task Added" })
+        const insertId = await createTask({ title, desc });
+        return res.status(201).json({ success: true, _id: insertId, message: "Task Added" })
     } catch (error) {
         return res.status(500).json({ success: false, error: error })
     }
