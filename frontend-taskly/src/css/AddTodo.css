@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+
+@layer components{
+    .input-add{
+        @apply border-b-2 border-b-green-500 outline-none px-2 py-1 
+    }
+}
+
+@tailwind utilities;
