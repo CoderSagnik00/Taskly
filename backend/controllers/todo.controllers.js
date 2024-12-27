@@ -34,8 +34,8 @@ export const getTask = async (req, res) => {
 export const addTask = async (req, res) => {
 
     try {
-        const { task } = req.body
-        await createTask(task);
+        const { title, desc } = req.body
+        await createTask({title, desc});
         return res.status(201).json({ success: true, message: "Task Added" })
     } catch (error) {
         return res.status(500).json({ success: false, error: error })

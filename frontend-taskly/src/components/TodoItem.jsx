@@ -14,7 +14,7 @@ function TodoItem({ _id, title, desc, delTodo }) {
 }
 
 TodoItem.propTypes = {
-    _id: PropTypes.number,
+    _id: PropTypes.string,
     title: PropTypes.string,
     desc: PropTypes.string,
     delTodo: PropTypes.func

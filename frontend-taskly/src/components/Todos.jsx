@@ -23,7 +23,7 @@ function Todos({ todos, delTodo }) {
 Todos.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
-      _id: PropTypes.number,
+      _id: PropTypes.string,
       title: PropTypes.string,
       desc: PropTypes.string
     })
