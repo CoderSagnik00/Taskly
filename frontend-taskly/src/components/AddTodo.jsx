@@ -7,7 +7,8 @@ function AddTodo({ addTodo }) {
     const [desc, setDesc] = useState("");
 
     const submit = () => {
-
+        setTitle("");
+        setDesc("");
 
         addTodo({ title, desc });
     }
