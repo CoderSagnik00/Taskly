@@ -4,8 +4,8 @@ import { client } from "../config/db.js";
 const db = client.db('Taskly');
 const todo = db.collection('todo');
 
-export const createTask = async (task) => {
-    const data = { "task": task }
+export const createTask = async ({title, desc}) => {
+    const data = { "title": title, "desc":desc }
     try {
         await todo.insertOne(data);
     } catch (err) {
