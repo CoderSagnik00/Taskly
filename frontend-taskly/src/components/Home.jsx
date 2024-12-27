@@ -1,9 +1,13 @@
 import AddTodo from "./AddTodo"
+import Todos from "./Todos"
 
 function Home() {
-  return (
-    <AddTodo/>
-  )
+    return (
+        <>
+            <AddTodo />
+            <Todos />
+        </>
+    )
 }
 
 export default Home
