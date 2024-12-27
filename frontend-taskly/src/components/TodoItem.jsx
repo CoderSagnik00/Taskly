@@ -5,7 +5,7 @@ function TodoItem({ _id, title, desc, delTodo }) {
         delTodo({_id});
     }
     return (
-        <div className='space-y-2'>
+        <div className='space-y-2 border-y-2 border-gray-200 px-3 pb-2'>
             <div className='text-lg font-bold'>{title}</div>
             <div>{desc}</div>
             <button className='bg-red-500 px-2 py-1 rounded-md text-white' onClick={deleteBtnClicked}>Delete</button>
