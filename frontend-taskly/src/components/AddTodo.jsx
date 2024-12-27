@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import '../css/AddTodo.css'
+import PropTypes from 'prop-types';
 
-function AddTodo() {
+function AddTodo({ addTodo }) {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
 
-    const submit = () =>{
-        console.log(title);
-        console.log(desc);
+    const submit = () => {
+
+
+        addTodo({ title, desc });
     }
     return (
         <div className='flex flex-col items-center justify-center m-9'>
@@ -22,5 +24,18 @@ function AddTodo() {
         </div>
     )
 }
+
+
+AddTodo.propTypes = {
+    todos: PropTypes.arrayOf(
+        PropTypes.shape({
+            _id: PropTypes.number,
+            title: PropTypes.string,
+            desc: PropTypes.string
+        })
+    ),
+    addTodo: PropTypes.func
+}
+
 
 export default AddTodo
