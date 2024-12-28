@@ -8,15 +8,16 @@ import { connectDB } from './config/db.js';
 
 const app = express();
 
+app.use(express.json())
 
 if (process.env.ENV === 'dev') {
-    app.use(express.json())
+    app.use(cors())
+
 } else if (process.env.ENV === 'prod') {
     app.use(express.static(path.resolve(import.meta.dirname, "../frontend-taskly/dist")))
 
 }
 
-app.use(cors())
 
 app.use("/api/todo/", routes_todo);
 

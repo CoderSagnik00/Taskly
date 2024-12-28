@@ -1,5 +1,5 @@
 export const addtodoToDB = async (data) => {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/todo`, {
+    const response = await fetch('/api/todo', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
