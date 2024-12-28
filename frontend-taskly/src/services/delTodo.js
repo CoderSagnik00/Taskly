@@ -1,5 +1,5 @@
 export const delTodoToDB = async (data) => {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/todo`, {
+    const response = await fetch(`/api/todo`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
